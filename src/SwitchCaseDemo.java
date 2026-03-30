@@ -38,14 +38,26 @@ public class SwitchCaseDemo {
         //Nguoc lai neu browser la Safari thi in ra "Run on Mac platform"
         //Nguoc lai thi in ra "Not Support!"
 
-        if(browser.equalsIgnoreCase("chrome") || browser.equalsIgnoreCase("firefox") || browser.equalsIgnoreCase("edge")) {
-            System.out.println("Run on Windows platform");
-        } else if (browser.equalsIgnoreCase("safari")) {
-            System.out.println("Run on Mac platform");
-        } else {
-            System.out.println("Not Support !");
-        }
+//        if(browser.equalsIgnoreCase("chrome") || browser.equalsIgnoreCase("firefox") || browser.equalsIgnoreCase("edge")) {
+//            System.out.println("Run on Windows platform");
+//        } else if (browser.equalsIgnoreCase("safari")) {
+//            System.out.println("Run on Mac platform");
+//        } else {
+//            System.out.println("Not Support !");
+//        }
 
+        switch (browser.toLowerCase()) {
+            case "chrome":
+            case "firefox":
+            case "edge":
+                System.out.println("Run on Windows platform");
+                break;
+            case "safari":
+                System.out.println("Run on Mac platform");
+                break;
+            default:
+                System.out.println("Not Support !");
+        }
 
     }
 }
