@@ -6,6 +6,8 @@ public class ArrayDemo {
         System.out.println(intArrays[1]);
         System.out.println(intArrays[2]);
 
+        System.out.println(intArrays); // ???
+
         intArrays[0] = 20;
         intArrays[1] = 30;
         intArrays[2] = 40;
@@ -34,6 +36,27 @@ public class ArrayDemo {
         System.out.println(wordsArray[1]);
         System.out.println(wordsArray[2]);
         System.out.println(wordsArray[3]);
+
+        System.out.println("---------------------------");
+        int arr2D[][] = new int[2][3];
+        arr2D[0][1] = 5;
+        arr2D[1][2] = 6;
+
+        System.out.println("Get value at index row 0 & col 0");
+        System.out.println(arr2D[0][0]);
+
+        System.out.println("Get value at index row 0 & col 1");
+        System.out.println(arr2D[0][1]);
+
+        //Lặp in từng phần tử
+        //for ngoai la cho hàng (row)
+        for (int i = 0; i < arr2D.length; i++) {
+            //for trong là cho cột (col)
+            for(int j = 0; j < arr2D[0].length; j++) {
+                System.out.print(arr2D[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
